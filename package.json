@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/aytarozgur/Otsimo-Task-2019/issues"
   },
-  "homepage": "https://github.com/aytarozgur/Otsimo-Task-2019#readme"
+  "homepage": "https://github.com/aytarozgur/Otsimo-Task-2019#readme",
+  "dependencies": {
+    "hapi": "^18.1.0"
+  }
 }
