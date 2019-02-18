@@ -15,3 +15,9 @@ var newGame = '/newGame';
 var endpoints = moves.map( move => {
   return `/${move}`;
 });
+
+// return a random one of 'rock', 'paper', or 'scissors'
+function selectComputerMove () {
+  var roll = Math.floor(Math.random() * moves.length);
+  return moves[roll];
+}
