@@ -79,3 +79,15 @@ server.route({
         reply({endpoints: endpoints});
     }
 });
+
+endpoints.map( (endpoint, index) => {
+  server.route({
+    method: 'GET',
+    path: endpoint,
+    handler: function (request, reply) {
+      var results = playGameAgainstComputer(moves[index]);
+      results.humanWinResult = humanWinResult(results.isWin)
+      reply(results);
+    }
+  })
+});
