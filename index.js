@@ -52,3 +52,13 @@ function playGameAgainstComputer (playerMove) {
     return results;
   }
 }
+
+function humanWinResult (isWin) {
+  if (isWin === null) {
+    return "tie";
+  }
+  if (isWin) {
+    return "Win!";
+  }
+  return "Loss!";
+}
