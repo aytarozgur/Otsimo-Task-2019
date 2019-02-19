@@ -2,8 +2,10 @@
 
 const Hapi = require('hapi');
 
-const server = new Hapi.Server();
-server.connection({ port: 8080 });
+const server = new Hapi.Server({  
+  host: 'localhost',
+  port: 8080
+})
 
 var moves = [
   'rock',
