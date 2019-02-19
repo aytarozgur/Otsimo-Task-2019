@@ -91,3 +91,7 @@ endpoints.map( (endpoint, index) => {
     }
   })
 });
+
+server.start(() => {
+    console.log('Server running at:', server.info.uri);
+});
