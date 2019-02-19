@@ -63,6 +63,7 @@ function humanWinResult (isWin) {
   return "Loss!";
 }
 
+// Rest Api
 server.route({
     method: 'GET',
     path: '/',
