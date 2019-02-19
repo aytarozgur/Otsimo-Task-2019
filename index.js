@@ -5,6 +5,7 @@ const Hapi = require('hapi');
 const server = new Hapi.Server();
 server.connection({ port: 8080 });
 
+// RPS
 var moves = [
   'rock',
   'paper',
@@ -53,6 +54,7 @@ function playGameAgainstComputer (playerMove) {
   }
 }
 
+// the result
 function humanWinResult (isWin) {
   if (isWin === null) {
     return "tie";
@@ -92,6 +94,7 @@ endpoints.map( (endpoint, index) => {
   })
 });
 
+// server starts
 server.start(() => {
     console.log('Server running at:', server.info.uri);
 });
