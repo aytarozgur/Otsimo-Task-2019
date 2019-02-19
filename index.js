@@ -21,3 +21,34 @@ function selectComputerMove () {
   var roll = Math.floor(Math.random() * moves.length);
   return moves[roll];
 }
+
+// returns true if player won
+// returns false if computer won
+// returns null if tie
+function playGameAgainstComputer (playerMove) {
+  var ComputerMove = selectComputerMove();
+  console.log(playerMove, ComputerMove);
+  var results = {
+    ComputerMove: ComputerMove,
+    playerMove: playerMove,
+    isWin: null
+  };
+  if (ComputerMove === playerMove) {
+    return results;
+  }
+  if (ComputerMove === 'rock') {
+    // this is a win for the player only if they did not play scissors into rock
+    // we have already ruled out all ties so the player can't be rock
+    results.isWin = (playerMove !== 'scissors');
+    return results;
+  }
+  if (ComputerMove === 'scissors') {
+    // this is a win for the player if he is not paper
+    results.isWin = (playerMove !== 'paper');
+    return results;
+  }
+  if (ComputerMove === 'paper') {
+    results.isWin = (playerMove !== 'rock');
+    return results;
+  }
+}
