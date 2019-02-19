@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/aytarozgur/Otsimo-Task-2019#readme",
   "dependencies": {
-    "hapi": "^18.1.0"
+    "hapi": "^12.0.0"
   }
 }
