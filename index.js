@@ -62,3 +62,19 @@ function humanWinResult (isWin) {
   }
   return "Loss!";
 }
+
+server.route({
+    method: 'GET',
+    path: '/',
+    handler: function (request, reply) {
+        reply({endpoints: newGame});
+    }
+});
+
+server.route({
+    method: 'GET',
+    path: '/newGame',
+    handler: function (request, reply) {
+        reply({endpoints: endpoints});
+    }
+});
