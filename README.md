@@ -1,4 +1,4 @@
-# Otsimo-Task-2019
+# Rock-Paper-Scissors-RPS-Game
 
 `npm install`
 
